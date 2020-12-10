@@ -99,9 +99,9 @@ object ListTest extends App {
   println(listOfIntegers.toString)
   println(listOfStrings.toString)
 
-  println(listOfIntegers.map(elem => elem *2).toString)
+  println(listOfIntegers.map( _ * 2 ).toString)
 
-  println(listOfIntegers.filter(elem => elem % 2 == 0).toString)
+  println(listOfIntegers.filter( _% 2 == 0 ).toString)
 
   println((listOfIntegers ++ anotherListOfIntegers).toString)
   println(listOfIntegers.flatMap(elem => new Cons(elem, new Cons(elem + 1, Empty))
